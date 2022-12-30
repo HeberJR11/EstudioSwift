@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_302_CoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre producto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5R-YE-xqB">
+                                <rect key="frame" x="10" y="100" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Precio del producto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUt-DG-BZe">
+                                <rect key="frame" x="10" y="175" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Existencias del producto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZLJ-l2-ZN8">
+                                <rect key="frame" x="10" y="250" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVo-6x-AXX">
+                                <rect key="frame" x="10" y="69" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBG-16-Yq3">
+                                <rect key="frame" x="10" y="144" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Existencias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcm-h5-YgE">
+                                <rect key="frame" x="10" y="219" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZ1-hW-l5m">
+                                <rect key="frame" x="297" y="294" width="86" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Guardar"/>
+                                <connections>
+                                    <action selector="guardarAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rFS-QN-KAD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eBG-16-Yq3" secondAttribute="trailing" constant="10" id="05U-5Z-mK3"/>
+                            <constraint firstItem="dcm-h5-YgE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="2W5-ug-QZe"/>
+                            <constraint firstItem="ZLJ-l2-ZN8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="31b-PG-RXe"/>
+                            <constraint firstItem="eUt-DG-BZe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="5X8-4y-IP9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b5R-YE-xqB" secondAttribute="trailing" constant="10" id="IQw-yC-39S"/>
+                            <constraint firstItem="b5R-YE-xqB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="R4O-XW-XhV"/>
+                            <constraint firstItem="eBG-16-Yq3" firstAttribute="top" secondItem="b5R-YE-xqB" secondAttribute="bottom" constant="10" id="RY9-Jy-gn8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dcm-h5-YgE" secondAttribute="trailing" constant="10" id="Zm6-so-zYl"/>
+                            <constraint firstItem="dcm-h5-YgE" firstAttribute="top" secondItem="eUt-DG-BZe" secondAttribute="bottom" constant="10" id="aMe-lS-vsu"/>
+                            <constraint firstItem="CZ1-hW-l5m" firstAttribute="top" secondItem="ZLJ-l2-ZN8" secondAttribute="bottom" constant="10" id="b39-6t-Ixg"/>
+                            <constraint firstItem="b5R-YE-xqB" firstAttribute="top" secondItem="hVo-6x-AXX" secondAttribute="bottom" constant="10" id="bj3-Bt-AAg"/>
+                            <constraint firstItem="hVo-6x-AXX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="cTJ-Gn-fDp"/>
+                            <constraint firstItem="ZLJ-l2-ZN8" firstAttribute="top" secondItem="dcm-h5-YgE" secondAttribute="bottom" constant="10" id="cvB-aL-diI"/>
+                            <constraint firstItem="eUt-DG-BZe" firstAttribute="top" secondItem="eBG-16-Yq3" secondAttribute="bottom" constant="10" id="fBW-cI-OTW"/>
+                            <constraint firstItem="hVo-6x-AXX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="fGS-dw-1dD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZLJ-l2-ZN8" secondAttribute="trailing" constant="10" id="fcf-MW-gxd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eUt-DG-BZe" secondAttribute="trailing" constant="10" id="o6o-xp-Mol"/>
+                            <constraint firstItem="eBG-16-Yq3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="oOh-fN-WvE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CZ1-hW-l5m" secondAttribute="trailing" constant="10" id="ydV-gp-Inx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="existenciasTextField" destination="ZLJ-l2-ZN8" id="3DK-2u-CYC"/>
+                        <outlet property="nombreTextField" destination="b5R-YE-xqB" id="qmf-Fw-CG8"/>
+                        <outlet property="precioTextField" destination="eUt-DG-BZe" id="avK-fD-EVH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

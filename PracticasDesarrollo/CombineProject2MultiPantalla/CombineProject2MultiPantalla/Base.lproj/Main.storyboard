@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CombineProject2MultiPantalla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sin fruta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYd-wz-tXq">
+                                <rect key="frame" x="164.66666666666666" y="415.66666666666669" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-Jl-okx">
+                                <rect key="frame" x="119.66666666666669" y="446.66666666666669" width="154" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Seleccionar fruta"/>
+                                <connections>
+                                    <segue destination="t8h-74-fNl" kind="popoverPresentation" identifier="goPantalla2" popoverAnchorView="2NK-Jl-okx" id="ulf-pP-PJr">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2NK-Jl-okx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DpA-r0-7j7"/>
+                            <constraint firstItem="2NK-Jl-okx" firstAttribute="top" secondItem="xYd-wz-tXq" secondAttribute="bottom" constant="10" id="WRs-D4-C8W"/>
+                            <constraint firstItem="xYd-wz-tXq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bOa-2E-xXM"/>
+                            <constraint firstItem="xYd-wz-tXq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="caq-pK-ORl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="frutaLabel" destination="xYd-wz-tXq" id="vEV-nO-gCk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="256" y="4"/>
+        </scene>
+        <!--Seleccionar Fruta View Controller-->
+        <scene sceneID="xbx-h4-Qrf">
+            <objects>
+                <viewController id="t8h-74-fNl" customClass="seleccionarFrutaViewController" customModule="CombineProject2MultiPantalla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cfv-bg-7LU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lmf-Lc-73Q">
+                                <rect key="frame" x="36.666666666666657" y="283.66666666666669" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Z7-Rx-c5G">
+                                <rect key="frame" x="10" y="69" width="92" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancelar"/>
+                                <connections>
+                                    <action selector="cancelarAction:" destination="t8h-74-fNl" eventType="touchUpInside" id="6n6-DM-fdh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfR-AX-T6h">
+                                <rect key="frame" x="299" y="69" width="84" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Aceptar"/>
+                                <connections>
+                                    <action selector="aceptarAction:" destination="t8h-74-fNl" eventType="touchUpInside" id="f4P-m0-yUq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Yh-wX-i0d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Z7-Rx-c5G" firstAttribute="leading" secondItem="5Yh-wX-i0d" secondAttribute="leading" constant="10" id="Ol6-dX-Awa"/>
+                            <constraint firstItem="0Z7-Rx-c5G" firstAttribute="top" secondItem="5Yh-wX-i0d" secondAttribute="top" constant="10" id="euE-la-uxg"/>
+                            <constraint firstItem="5Yh-wX-i0d" firstAttribute="trailing" secondItem="VfR-AX-T6h" secondAttribute="trailing" constant="10" id="kc1-pl-yac"/>
+                            <constraint firstItem="VfR-AX-T6h" firstAttribute="top" secondItem="5Yh-wX-i0d" secondAttribute="top" constant="10" id="t7c-wZ-Vsj"/>
+                            <constraint firstItem="Lmf-Lc-73Q" firstAttribute="centerX" secondItem="Cfv-bg-7LU" secondAttribute="centerX" id="xiN-8P-XR2"/>
+                            <constraint firstItem="Lmf-Lc-73Q" firstAttribute="centerY" secondItem="Cfv-bg-7LU" secondAttribute="centerY" id="xxr-yS-DvK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="frutasPickerView" destination="Lmf-Lc-73Q" id="MPg-wV-GAA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="puz-kI-6sU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
